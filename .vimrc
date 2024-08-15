@@ -1,15 +1,20 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required for vundle
+" solves issues with working directory being 'unkown', which breaks Vundle installs, but might cause other issues?
+cd ~
+
+set nocompatible " be iMproved, required
+filetype off     " required for vundle
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle, required
+" When 1st time using Vundle, run :VundleInstall in vim
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -33,5 +38,10 @@ set expandtab
 " <Leader> is \
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-colorscheme delek
+" Theme
+set background=dark
+colorscheme gruvbox
+" completely black background
+hi Normal guibg=black ctermbg=black
+
 set cursorline
