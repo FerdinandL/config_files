@@ -45,3 +45,6 @@ colorscheme gruvbox
 hi Normal guibg=black ctermbg=black
 
 set cursorline
+
+" Copy/paste shared with clipboard
+set clipboard=unnamed
